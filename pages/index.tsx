@@ -1,5 +1,4 @@
 import { useMemo } from "react"
-import { Layout } from "../layouts"
 
 export default function Home() {
   const offerings = useMemo(
@@ -13,8 +12,8 @@ export default function Home() {
   )
 
   return (
-    <Layout>
-      <h1 className="text-2xl text-gray-800 bg-orange-300 px-2 py-1 w-max select-none">
+    <div className="p-10 flex flex-col items-center gap-5">
+      <h1 className="text-2xl text-gray-800 bg-orange-300 px-2 py-1 w-max select-none rounded-t-lg">
         PizzaDev
       </h1>
 
@@ -35,7 +34,7 @@ export default function Home() {
         {links.map((d, idx) => (
           <a
             href={d.link}
-            className="bg-violet-100 hover:bg-violet-200 cursor-not-allowed px-2 py-1 rounded-xl"
+            className="bg-violet-100 hover:bg-violet-200 cursor-pointer px-2 py-1 rounded-xl"
             target="_blank"
             referrerPolicy="no-referrer"
             key={idx}
@@ -44,6 +43,6 @@ export default function Home() {
           </a>
         ))}
       </div>
-    </Layout>
+    </div>
   )
 }
