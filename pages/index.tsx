@@ -14,8 +14,8 @@ export default function Home() {
 
   return (
     <Layout>
-      <h1 className="font-bold text-2xl text-gray-800 bg-orange-300 px-2 py-1 w-max select-none">
-        pizzaDev
+      <h1 className="text-2xl text-gray-800 bg-orange-300 px-2 py-1 w-max select-none">
+        PizzaDev
       </h1>
 
       <p>A fun coding community? {"[WIP]"}</p>
@@ -24,7 +24,7 @@ export default function Home() {
         {offerings.map((text, idx) => (
           <p
             key={idx}
-            className="hover:bg-orange-100 cursor-not-allowed px-2 py-1 rounded-xl"
+            className="cursor-not-allowed px-2 py-1 rounded-xl underline text-zinc-700 hover:bg-orange-100 hover:text-zinc-900"
           >
             {text}
           </p>
